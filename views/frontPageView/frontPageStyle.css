@@ -1,0 +1,112 @@
+html, body {
+height: 100%;
+overflow: auto;
+background: #000;
+}
+
+.bg-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* make the background video darker */
+.bg-video {
+  filter: brightness(0.60) contrast(0.95);
+} 
+
+
+
+#myBtn {
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* 4 cards per row on large screens */
+    min-width: 200px;
+    max-width: 300px;
+    padding: 10px;
+    text-align: center;
+    box-sizing: border-box;
+    outline: 2px solid #000000;
+    color: black;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.card p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .card-container {
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .card {
+    width: calc(33.333% - 15px); /* 3 cards per row */
+    min-width: 180px;
+    max-width: 250px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .card-container {
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .card {
+    width: calc(50% - 10px); /* 2 cards per row */
+    min-width: 150px;
+    max-width: 200px;
+  }
+}
+
+/* Small mobile breakpoint */
+@media (max-width: 480px) {
+  .card-container {
+    gap: 20px;
+    padding: 8px;
+  }
+
+  .card {
+    width: calc(100% - 16px); /* 1 card per row */
+    min-width: 120px;
+    max-width: 180px;
+  }
+}
+

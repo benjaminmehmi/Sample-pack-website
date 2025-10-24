@@ -1,0 +1,12 @@
+function samplePackCard(samplePack) {
+	return /* HTML */ ` <div class="samplePackCard">
+		<img
+			class="samplePackCardImg"
+			src="${samplePack.imgUrl}"
+		/>
+		<h4>${samplePack.name}</h4>
+		<h5>${samplePack.price}</h5>
+		<h5>${samplePack.description}</h5>
+		
+	</div>`;
+}
